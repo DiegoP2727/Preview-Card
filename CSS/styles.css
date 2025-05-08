@@ -1,0 +1,163 @@
+:root{
+    /**Colors*/
+
+    /**Primary*/
+
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    /**Neutral*/
+
+    --Very_dark_blue: hsl(212, 21%, 14%);
+    --Dark_grayish_blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+/*?### Font
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700*/
+
+
+
+.fraunces{
+    font-family: "Fraunces", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "SOFT" 0,
+      "WONK" 0;
+  }
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700; /*500-700*/
+    font-style: normal;
+}
+/**Etiquetas*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /*Es para que no afecte el paddin al tamaño de px en totales*/
+    background-color: var(--Cream);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* img{
+    height: 40rem;
+    width: 27rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+} */
+
+.contenedor{
+    background-color: var(--White);
+    height: 40rem;
+    width: 27rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 2rem;
+}
+h1{
+    font-size: 3rem;
+    padding-right: 2rem;
+    color: var(--Very_dark_blue);
+}
+h2{
+    margin-top: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-align: left;
+    color: var(--Dark_grayish_blue);
+}
+p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 1rem;
+    color: var(--Dark_grayish_blue);
+    font-size: 1.4rem;
+}
+.precios{
+    margin: .7rem 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.precioGrande{
+    font-family:"Fraunces", serif;
+    font-size: 3rem;
+    margin-right: 1rem;
+    font-weight: 700;
+    color: var(--Dark_cyan);
+    margin-right: 1.5rem;
+}
+.precioTachado{
+    color: var(--Dark_grayish_blue);
+    text-decoration: line-through;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+main a{
+    text-decoration: none;
+    text-align: center;
+    color: var(--Cream);
+    font-size: 1.5rem;
+}
+.barra{
+    background-color: var(--Dark_cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.barra:hover{
+    background-color: var(--Very_dark_blue);
+}
+.barra img{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1rem;
+}
+.ladoIzquierdo{
+    height: 40rem;
+    width: 27rem;
+    background-color: black;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-image: url("../images/image-product-desktop.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media(min-width: 370px) and (max-width: 1300px) {
+ main{
+    flex-direction: column;
+ }
+ .ladoIzquierdo{
+    background-image: url("..//images/image-product-mobile.jpg");
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 1rem;
+    height: 20rem;
+    width: 34rem;
+ }
+ .contenedor{
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 1rem;
+    width: 34rem;
+ }
+ h1{
+    font-size: 2.6rem;
+    color: var(--Very_dark_blue);
+    padding-right: 0rem;
+    }
+}
